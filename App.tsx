@@ -10,7 +10,7 @@ import {
   Text,
   View,
   StyleSheet,
-  Button
+  Button,Image, ScrollView
 } from 'react-native';
 
 const style = StyleSheet.create({
@@ -45,7 +45,7 @@ function App(): JSX.Element {
   
   return (
     
-      
+      <ScrollView>
         <View
               style={{
                 flex: 1,
@@ -57,11 +57,15 @@ function App(): JSX.Element {
               <LotsOfGreetings/>
               
               <View>
-                  <Text>You clicked {count} times!</Text>
-                  <Button onPress={() => setCount(count + 1)} title="Click me!"/>
+                  <Text>COUNTER: {count}</Text>
+                  <Button onPress={() => setCount(count + 1)} title="Add"/>
+                  <Button onPress={() => {setCount(count - 1)}} title="Decrease"/>
               </View>
+              <Image source={{uri: 'https://reactnative.dev/docs/assets/p_cat2.png', }}
+                style={{width: 200, height: 200}}
+              />
         </View>
-  
+        </ScrollView>
         
       
 
