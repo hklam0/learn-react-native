@@ -10,7 +10,7 @@ import {
   Text,
   View,
   StyleSheet,
-  Button,Image, ScrollView
+  Button,Image, ScrollView, TextInput
 } from 'react-native';
 
 const style = StyleSheet.create({
@@ -64,6 +64,15 @@ function App(): JSX.Element {
               <Image source={{uri: 'https://reactnative.dev/docs/assets/p_cat2.png', }}
                 style={{width: 200, height: 200}}
               />
+
+            <TextInput
+              style={{
+                height: 40,
+                borderColor: 'gray',
+                borderWidth: 1,
+              }}
+              defaultValue="Try to type in me!"
+            />
         </View>
         </ScrollView>
         
