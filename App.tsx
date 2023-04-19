@@ -90,7 +90,7 @@ function App(): JSX.Element {
   const ButtonList = ({pokemons}) => {
     
     const buttonListItem = pokemons.map((pokemon, index) => {
-      return (<View>
+      return (<View key={index}>
         <Button onPress={() => {
         setPokemonIsSelected(true)
         setSelectedPokemonURL(pokemon.url)
